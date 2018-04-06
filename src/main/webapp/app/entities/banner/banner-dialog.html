@@ -1,0 +1,44 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myBannerLabel" data-translate="test0403JsApp.banner.home.createOrEditLabel">Create or edit a Banner</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.banner.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.banner.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test0403JsApp.banner.banner" for="field_banner">Banner</label>
+            <input type="text" class="form-control" name="banner" id="field_banner"
+                    ng-model="vm.banner.banner"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test0403JsApp.banner.describs" for="field_describs">Describs</label>
+            <input type="text" class="form-control" name="describs" id="field_describs"
+                    ng-model="vm.banner.describs"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test0403JsApp.banner.isdelete" for="field_isdelete">Isdelete</label>
+            <input type="number" class="form-control" name="isdelete" id="field_isdelete"
+                    ng-model="vm.banner.isdelete"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

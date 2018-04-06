@@ -1,0 +1,25 @@
+
+{
+    "test0403JsApp": {
+        "banner" : {
+            "home": {
+                "title": "Banners",
+                "createLabel": "建立一筆新的 Banner",
+                "createOrEditLabel": "建立或編輯 Banner",
+                "search": "搜尋 Banner"
+            },
+            "created": "新的 Banner 建立成功，識別碼為 {{ param }}",
+            "updated": "識別碼為 {{ param }} 的 Banner 更新成功",
+            "deleted": "識別碼為 {{ param }} 的 Banner 刪除成功",
+            "delete": {
+                "question": "您確定要刪除 Banner {{ id }} 嗎?"
+            },
+            "detail": {
+                "title": "Banner"
+            },
+            "banner": "Banner",
+            "describs": "Describs",
+            "isdelete": "Isdelete"
+        }
+    }
+}

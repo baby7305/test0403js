@@ -1,0 +1,24 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "banner",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "describs",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isdelete",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180403074250",
+    "entityTableName": "banner",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

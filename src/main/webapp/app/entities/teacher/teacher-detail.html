@@ -1,0 +1,37 @@
+
+<div>
+    <h2><span data-translate="test0403JsApp.teacher.detail.title">Teacher</span> {{vm.teacher.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="test0403JsApp.teacher.tname">Tname</span></dt>
+        <dd>
+            <span>{{vm.teacher.tname}}</span>
+        </dd>
+        <dt><span data-translate="test0403JsApp.teacher.sex">Sex</span></dt>
+        <dd>
+            <span>{{vm.teacher.sex}}</span>
+        </dd>
+        <dt><span data-translate="test0403JsApp.teacher.age">Age</span></dt>
+        <dd>
+            <span>{{vm.teacher.age}}</span>
+        </dd>
+        <dt><span data-translate="test0403JsApp.teacher.student1">Student 1</span></dt>
+        <dd>
+            <span ng-repeat="student1 in vm.teacher.student1S">
+                <a ui-sref="student-detail({id: student1.id})">{{student1.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="teacher-detail.edit({id:vm.teacher.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

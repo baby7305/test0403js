@@ -1,0 +1,11 @@
+entity Banner
+{
+banner String,
+describs String,
+isdelete Integer
+}
+
+service Banner with serviceClass
+service Banner with serviceImpl
+
+paginate Banner with pagination

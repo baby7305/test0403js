@@ -1,0 +1,47 @@
+(function() {
+    'use strict';
+
+    angular
+        .module('test0403JsApp')
+        .controller('TeacherDialogController', TeacherDialogController);
+
+    TeacherDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Teacher', 'Student'];
+
+    function TeacherDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Teacher, Student) {
+        var vm = this;
+
+        vm.teacher = entity;
+        vm.clear = clear;
+        vm.save = save;
+        vm.students = Student.query();
+
+        $timeout(function (){
+            angular.element('.form-group:eq(1)>input').focus();
+        });
+
+        function clear () {
+            $uibModalInstance.dismiss('cancel');
+        }
+
+        function save () {
+            vm.isSaving = true;
+            if (vm.teacher.id !== null) {
+                Teacher.update(vm.teacher, onSaveSuccess, onSaveError);
+            } else {
+                Teacher.save(vm.teacher, onSaveSuccess, onSaveError);
+            }
+        }
+
+        function onSaveSuccess (result) {
+            $scope.$emit('test0403JsApp:teacherUpdate', result);
+            $uibModalInstance.close(result);
+            vm.isSaving = false;
+        }
+
+        function onSaveError () {
+            vm.isSaving = false;
+        }
+
+
+    }
+})();

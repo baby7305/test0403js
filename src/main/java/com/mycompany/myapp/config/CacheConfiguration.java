@@ -44,6 +44,13 @@ public class CacheConfiguration {
             cm.createCache(com.mycompany.myapp.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(com.mycompany.myapp.domain.PersistentToken.class.getName(), jcacheConfiguration);
             cm.createCache(com.mycompany.myapp.domain.User.class.getName() + ".persistentTokens", jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.Student.class.getName(), jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.Student.class.getName() + ".teachers", jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.Student.class.getName() + ".teacher1S", jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.Teacher.class.getName(), jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.Teacher.class.getName() + ".student1S", jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.Teacher.class.getName() + ".students", jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.Banner.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

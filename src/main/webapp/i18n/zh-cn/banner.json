@@ -1,0 +1,25 @@
+
+{
+    "test0403JsApp": {
+        "banner" : {
+            "home": {
+                "title": "Banners",
+                "createLabel": "创建新 Banner",
+                "createOrEditLabel": "创建或编辑 Banner",
+                "search": "查找 Banner"
+            },
+            "created": "Banner {{ param }} 创建成功",
+            "updated": "Banner {{ param }} 更新成功",
+            "deleted": "Banner {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Banner {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Banner"
+            },
+            "banner": "Banner",
+            "describs": "Describs",
+            "isdelete": "Isdelete"
+        }
+    }
+}
