@@ -19,6 +19,12 @@ logging:
         com.mycompany.myapp: DEBUG
         io.github.jhipster: DEBUG
 
+mybatis:
+    #指定*Mapper.xml中使用的对象的包的位置(同时指定可以使用别名)
+    type-aliases-package: com.mycompany.myapp.domain1
+    #指定*Mapper.xml的位置，对应的是传统xml配置文件方式
+    mapper-locations: classpath:mapper/*.xml
+
 spring:
     profiles:
         active: dev
